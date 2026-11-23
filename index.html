@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rapture Access Terminal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="terminal">
+
+        <header>
+            <h1>Rapture Access Terminal</h1>
+
+            <p>
+                Authorized Personnel Resource Network
+            </p>
+        </header>
+
+
+        <!-- LOGIN AREA -->
+
+        <section
+            id="login-section"
+            class="panel"
+        >
+
+            <h2>Login</h2>
+
+            <form id="login-form">
+
+                <label for="login-email">
+                    Email
+                </label>
+
+                <input
+                    id="login-email"
+                    type="email"
+                    required
+                >
+
+
+                <label for="login-password">
+                    Password
+                </label>
+
+                <input
+                    id="login-password"
+                    type="password"
+                    required
+                >
+
+
+                <button type="submit">
+                    Log In
+                </button>
+
+            </form>
+
+
+            <p id="login-message"></p>
+
+
+            <p>
+                Need an account?
+            </p>
+
+            <button
+                id="show-register-button"
+                type="button"
+                class="secondary-button"
+            >
+                Register
+            </button>
+
+        </section>
+
+
+        <!-- REGISTRATION AREA -->
+
+        <section
+            id="register-section"
+            class="panel hidden"
+        >
+
+            <h2>Create Account</h2>
+
+            <form id="register-form">
+
+                <label for="first-name">
+                    First Name
+                </label>
+
+                <input
+                    id="first-name"
+                    type="text"
+                    required
+                >
+
+
+                <label for="last-name">
+                    Last Name
+                </label>
+
+                <input
+                    id="last-name"
+                    type="text"
+                    required
+                >
+
+
+                <label for="register-email">
+                    Email
+                </label>
+
+                <input
+                    id="register-email"
+                    type="email"
+                    required
+                >
+
+
+                <label for="register-password">
+                    Password
+                </label>
+
+                <input
+                    id="register-password"
+                    type="password"
+                    required
+                >
+
+
+                <button type="submit">
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <p id="register-message"></p>
+
+
+            <button
+                id="back-to-login-button"
+                type="button"
+                class="secondary-button"
+            >
+                Back to Login
+            </button>
+
+        </section>
+
+
+        <!-- AUTHENTICATED AREA -->
+
+        <section
+            id="app-section"
+            class="hidden"
+        >
+
+            <section class="user-bar">
+
+                <p id="welcome-message">
+                    Authenticated
+                </p>
+
+                <button
+                    id="logout-button"
+                    type="button"
+                >
+                    Logout
+                </button>
+
+            </section>
+
+
+            <section class="controls">
+
+                <button
+                    id="add-supply-button"
+                    type="button"
+                >
+                    + Add Supply
+                </button>
+
+            </section>
+
+
+            <!-- SUPPLY FORM -->
+
+            <section
+                id="supply-form-section"
+                class="panel hidden"
+            >
+
+                <h2 id="supply-form-title">
+                    Add Supply
+                </h2>
+
+                <form id="supply-form">
+
+                    <label for="supply-name">
+                        Name
+                    </label>
+
+                    <input
+                        id="supply-name"
+                        type="text"
+                        required
+                    >
+
+
+                    <label for="supply-category">
+                        Category
+                    </label>
+
+                    <input
+                        id="supply-category"
+                        type="text"
+                        required
+                    >
+
+
+                    <label for="supply-location">
+                        Location
+                    </label>
+
+                    <input
+                        id="supply-location"
+                        type="text"
+                        required
+                    >
+
+
+                    <label for="supply-quantity">
+                        Quantity
+                    </label>
+
+                    <input
+                        id="supply-quantity"
+                        type="number"
+                        min="0"
+                        required
+                    >
+
+
+                    <label for="supply-status">
+                        Status
+                    </label>
+
+                    <input
+                        id="supply-status"
+                        type="text"
+                        required
+                    >
+
+
+                    <div class="form-buttons">
+
+                        <button type="submit">
+                            Save Supply
+                        </button>
+
+                        <button
+                            id="cancel-supply-button"
+                            type="button"
+                            class="secondary-button"
+                        >
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- SUPPLY LIST -->
+
+            <section class="panel">
+
+                <h2>Supply Inventory</h2>
+
+                <div id="supply-list">
+
+                    <p>
+                        Loading supplies...
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                Rapture Resource Management System
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
